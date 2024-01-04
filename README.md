@@ -24,4 +24,4 @@ Requirements
 2. The Go application can connect to the MySQL database and perform operations.
 3. The Docker Compose file correctly orchestrates the running of both services.
 
-Please submit your Dockerfiles and Docker Compose file for review upon completion.
+Please submit your Dockerfiles and Docker Compose file for review as fork of the current repo.
