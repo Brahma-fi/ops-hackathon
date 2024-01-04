@@ -12,7 +12,7 @@ import (
 
 func main() {
 	e := echo.New()
-
+	// TODO: use the docker images user name and password config
 	db, err := sql.Open("mysql", "user:password@/dbname")
 	if err != nil {
 		panic(err.Error())
