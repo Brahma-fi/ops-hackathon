@@ -8,33 +8,23 @@ The main Go file (main.go) is a simple web server application built using the Ec
 
 # Problem Statement
 
-Deploying a Web Server Application on Kubernetes using Terraform
-Objective: To set up a Kubernetes cluster to host a web server application, using Terraform for defining and configuring the cluster infrastructure. The application, developed in Go and utilizing the Echo framework, will interact with a MySQL database and provide specific HTTP endpoints.
+Deploying a Web Server Application on Kubernetes.
+Objective: To set up a Kubernetes cluster to host a web server application, configured to access the MySQL database and expose HTTP endpoints.
 
 # Requirements:
 
-Kubernetes Cluster: A simple Kubernetes cluster for deploying the application.
-Terraform: Utilize Terraform for infrastructure as code to define and configure the Kubernetes cluster.
+Kubernetes Cluster: A simple Kubernetes cluster for deploying the application locally using tools like k3d.io or k3s.
 
-Network Configuration: Ensure network settings allow the application to communicate with the MySQL database and expose the necessary endpoints to the internet. Implement necessary security measures for safe internet exposure.
+- Dockerfiles to deploy the application.
+- Helmcharts to configure the application and database.
+- Bash script or any script to test the whole deployment.
 
-# Deployment Steps
-
-Terraform Configuration:
-Define the Kubernetes cluster resources using Terraform.
-Configure networking, storage, and compute resources as required.
-
-Application Deployment:
-Containerize the main.go application.
-Create Kubernetes manifests (Deployment, Service, etc.) for the application and MySQL database.
-Apply these manifests to the Kubernetes cluster.
-
-Database Integration:
-Ensure the application can successfully connect and interact with the MySQL database within the cluster.
 
 # Evaluation Criteria
 
-The web server application is successfully deployed on the Kubernetes cluster.
-The application's endpoints are accessible via the internet.
-The application interacts flawlessly with the MySQL database.
-The system maintains high availability and performance standards.
+Helm charts that deploy the web server application to deploy and access the db on the Kubernetes cluster.
+Any solution diagrams explaing the deployment setup.
+
+# ExtraMile 
+- Deploy the application via argocd. 
+- Observability metrics on the service. 
