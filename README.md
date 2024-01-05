@@ -8,20 +8,33 @@ The main Go file (main.go) is a simple web server application built using the Ec
 
 # Problem Statement
 
-Your task is to dockerize the Go application and the MySQL database. You will need to create Dockerfiles for both the Go application and the MySQL database. Additionally, you will need to create a Docker Compose file to orchestrate the running of both services.
-Requirements
+Deploying a Web Server Application on Kubernetes using Terraform
+Objective: To set up a Kubernetes cluster to host a web server application, using Terraform for defining and configuring the cluster infrastructure. The application, developed in Go and utilizing the Echo framework, will interact with a MySQL database and provide specific HTTP endpoints.
 
-1. Dockerfile for Go Application: This Dockerfile should set up an environment to run the Go application. It should copy the Go source code and dependencies into the image, compile the application, and set up the compiled application to run when the container starts.
+# Requirements:
 
-2. Dockerfile for MySQL Database: This Dockerfile should set up a MySQL server. It should also set up the initial database schema by running the db/init.sql script when the container starts.
+Kubernetes Cluster: A simple Kubernetes cluster for deploying the application.
+Terraform: Utilize Terraform for infrastructure as code to define and configure the Kubernetes cluster.
 
-3. Docker Compose File: This file should define services for the Go application and the MySQL database. It should set up networking between the two services so that the Go application can connect to the MySQL server. The Go application service should depend on the MySQL service.
-   Deliverables
+Network Configuration: Ensure network settings allow the application to communicate with the MySQL database and expose the necessary endpoints to the internet. Implement necessary security measures for safe internet exposure.
+
+# Deployment Steps
+
+Terraform Configuration:
+Define the Kubernetes cluster resources using Terraform.
+Configure networking, storage, and compute resources as required.
+
+Application Deployment:
+Containerize the main.go application.
+Create Kubernetes manifests (Deployment, Service, etc.) for the application and MySQL database.
+Apply these manifests to the Kubernetes cluster.
+
+Database Integration:
+Ensure the application can successfully connect and interact with the MySQL database within the cluster.
 
 # Evaluation Criteria
 
-1. Both the Go application and MySQL database run successfully as Docker containers.
-2. The Go application can connect to the MySQL database and perform operations.
-3. The Docker Compose file correctly orchestrates the running of both services.
-
-Please submit your Dockerfiles and Docker Compose file for review as fork of the current repo.
+The web server application is successfully deployed on the Kubernetes cluster.
+The application's endpoints are accessible via the internet.
+The application interacts flawlessly with the MySQL database.
+The system maintains high availability and performance standards.
